@@ -76,9 +76,6 @@ pipeline {
                 }
             }
         }
-        stage ('Execute Ansible Play - CD'){
-            
-            
-        }
+        
     }
 }
