@@ -1,8 +1,8 @@
 pipeline {
     agent any
     tools {
-        maven "localMaven"
-        jdk "Java8"
+        maven "maven"
+        jdk "jdk8"
     }
 
     environment {
@@ -11,11 +11,11 @@ pipeline {
         // This can be http or https
         NEXUS_PROTOCOL = "http"
         // Where your Nexus is running
-        NEXUS_URL = "65.2.189.169:8081"
+        NEXUS_URL = "15.206.70.244:8081"
         // Repository where we will upload the artifact
         NEXUS_REPOSITORY = "LoginWebApp"
         // Jenkins credential id to authenticate to Nexus OSS
-        NEXUS_CREDENTIAL_ID = "nexusCredential"
+        NEXUS_CREDENTIAL_ID = "nexuscredential"
         ARTIFACT_VERSION = "${BUILD_NUMBER}"
     }
 
